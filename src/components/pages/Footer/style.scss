@@ -1,0 +1,129 @@
+@import '../../style/color.scss';
+
+.footer {
+  &__top {
+    justify-content: center;
+    text-align: center;
+    background: url('https://images.unsplash.com/photo-1506063917336-4814a8d404d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80') no-repeat center center fixed  ;
+    background-size: cover;
+    padding: 2rem 0;
+  }
+  &__social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    i {
+      padding: 5px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1px solid $second-color;
+    }
+  }
+  &__title {
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 3rem 0;
+  }
+  button {
+    background: none;
+    border: 1px solid $second-color;
+    padding: 1.5rem;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-bottom: 2rem;
+  }
+  &__bottom {
+    display: flex;
+    height: 300px;
+    padding: 3rem 0;
+    &-left {
+      width: 40%;
+      &-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      &-subtitle {
+        padding: 1rem 0;
+      }
+      &-title::after {
+        content: '';
+        width: 50px;
+        height: 2px;
+        background: $second-color;
+        margin: 1rem 0;
+        position: absolute;
+        top: 750%;
+        left: 14%;
+      }
+    }
+    &-right {
+      width: 60%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+    }
+  }
+  &__right-title {
+    p {
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding-bottom: 20px;
+    }
+    &-item {
+      padding: 10px 0;
+      cursor: pointer;
+      &:hover {
+        color: $second-color;
+      }
+      i {
+        padding-right: 10px;
+      }
+    }
+  }
+  &__infooter {
+    width: 100%;
+    border-top: 1px solid #333;
+    font-size: .8rem;
+    padding: 2rem 0;
+    &-title {
+      display: inline;
+      span {
+        padding-right: 2rem;
+        &:hover:nth-child(2), &:hover:nth-child(3) {
+          cursor: pointer;
+          color: $second-color;
+        }
+      }
+    }
+    &-bottom {
+      padding-top: 1rem;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      gap: 2rem;
+      span {
+        width: 70%;
+      }
+      &-social {
+        display: inline-flex;
+        align-items: center;
+        i {
+          font-size: 1.5rem;
+          padding: 0 2rem;
+          cursor: pointer;
+          &:hover {
+            color: $second-color;
+          }
+        }
+      }
+    }
+  }
+}

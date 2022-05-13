@@ -1,0 +1,80 @@
+@import '../../style/color.scss';
+
+// home top
+.home {
+  background: url('https://images.pexels.com/photos/1097456/pexels-photo-1097456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center fixed;
+  background-size: cover;
+  width: 100%;
+  height: max-content;
+  &__wrap {
+    padding-top: 15rem;
+  }
+  &__title {
+    font-size: 2rem;
+    color: $second-color;
+  }
+  &__subtitle {
+    font-size: 8rem;
+    font-weight: 600;
+  }
+  &__button {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: none;
+    border: 1px solid $second-color;
+    color: #fff;
+    text-transform: uppercase;
+  }
+}
+
+// home card
+
+.home__card {
+  padding: 5rem 0;
+  &-item {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 1rem;
+    &-content {
+      background-color: $main-color;
+      padding: 3rem;
+      &:hover {
+        outline: 3px solid $second-color;
+      }
+    }
+    &-content:nth-child(2) {
+      outline: 3px solid $second-color;
+      &:hover {
+        outline: invert;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -515px;
+        left: 50%;
+        right: 0;
+        height: 3rem;
+        width: 3px;
+        background-color: $second-color;
+      }
+    }
+    
+  }
+  &-icon {
+    font-size: 3rem;
+    color: $second-color;
+    padding-bottom: 2rem;
+  }
+  &-title {
+    font-size: 1.5rem;
+  }
+  &-line {
+    border-bottom: 2px solid $second-color;
+    width: 20%;
+    padding: .5rem;
+  }
+  &-text {
+    padding-top: 2rem;
+  }
+}

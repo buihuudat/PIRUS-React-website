@@ -1,0 +1,85 @@
+@import '../../style/color.scss';
+.work {
+  overflow: hidden;
+  padding-bottom: 10rem;
+  &__wrap {
+
+  }
+  &__top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    button {
+      width: 150px;
+      height: 70px;
+      background: none;
+      outline: 1px solid $second-color;
+      color: #FFF;
+      text-transform: uppercase;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+  &__title {
+    font-size: 4rem;
+    font-weight: 600;
+    span {
+      padding-left: 5rem;
+    }
+    &-line::after {
+      content: '';
+      position: absolute;
+      left: 14%.5;
+      top: 330%;
+      bottom: 10px;
+      height: 3px;
+      width: 4rem;
+      background-color: $second-color;
+    }
+  }
+  &__subtitle {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: $second-color;
+  }
+  &__content {
+    position: relative;
+    width: 100vw;
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 2rem;
+    img {
+      width: 200px;
+      // max-width: 400px;
+      transition: ease 1s;
+      height: 500px;
+      overflow: hidden;
+      &:hover {
+        width: 500px;
+        &~.work__content-text {
+          opacity: 1;
+        }
+      }
+    }
+    &-text {
+      opacity: 0;
+      transition: ease 1s;
+      font-weight: 600;
+    }
+  }
+  &__line::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    top: 420%;
+    height: 3rem;
+    width: 3px;
+    background-color: $second-color;
+  }
+}

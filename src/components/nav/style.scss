@@ -1,0 +1,77 @@
+@import '../style/color.scss';
+.nav {
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+  &__wrap {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3rem 5rem;
+    font-size: 1rem;
+  }
+
+  &__logo {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  &__link {
+    display: flex;
+    flex-direction: row;
+    // align-items: center;
+    gap: 3rem;
+    padding: 10px;
+    &-item {
+      padding: 10px;
+    }
+    &-child {
+      position: absolute;
+      background-color: $main-color;
+      width: 150px;
+      &-item {
+        padding-top: 10px;
+      }
+    }
+    a {
+      color: #fff;
+      padding: 10px;
+    }
+  }
+}
+
+.nav__link-child {
+  display: none;
+}
+.nav__link .nav-home:hover .nav-home {
+  display: block;
+}
+.nav__link .nav-service:hover .nav-service {
+  display: block;
+}
+.nav__link .nav-contact:hover .nav-contact {
+  display: block;
+}
+
+.nav__link-item:nth-child(6) {
+  color: red;
+  border: 2px solid $second-color;
+}
+
+
+.nav__link-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  transition: width .5s ease;
+  height: 2px;
+  background-color: #00436E;
+}
+// .nav__link-item:hover::after {
+//   width: 100%;
+//   color: #00436E;
+// }

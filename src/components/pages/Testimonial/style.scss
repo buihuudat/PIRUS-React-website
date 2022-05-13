@@ -1,0 +1,83 @@
+@import '../../style/color.scss';
+
+.testimonial {
+  background-color: #121212;
+  padding-bottom: 8rem;
+  &__title {
+    font-size: 4rem;
+    font-weight: 600;
+    span {
+      padding-left: 5rem;
+    }
+    &-line::after {
+      content: '';
+      position: absolute;
+      left: 14%.5;
+      top: 440%;
+      bottom: 10px;
+      height: 3px;
+      width: 4rem;
+      background-color: $second-color;
+    }
+  }
+  &__subtitle {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: $second-color;
+  }
+  &__content {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 3rem 1rem;
+    &-item {
+      text-align: center;
+    }
+  }
+  &__box {
+    padding: 2rem 2rem 4rem 2rem;
+    background-color: $main-color;
+    outline: 3px solid #333;;
+    &-icon {
+      font-size: 5rem;
+      color: $second-color;
+    }
+    &-text {
+      padding: 2rem 0;
+    }
+    &-star {
+      color: yellow
+    }
+  }
+  &__img {
+    position: relative;
+    height: 80px;
+    img {
+      position: absolute;
+      top: -2.7rem;
+      left: 145px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+  } 
+  &__name {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  &__position {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  &__line::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    top: 530%;
+    height: 3rem;
+    width: 3px;
+    background-color: $second-color;
+  }
+}

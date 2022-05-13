@@ -1,0 +1,77 @@
+@import '../../style/color.scss';
+.service {
+  padding-bottom: 10rem;
+  &__wrap {
+    padding-top: 1rem;
+  }
+  &__title {
+    font-size: 4rem;
+    font-weight: 600;
+    span {
+      padding-left: 5rem;
+    }
+    &-line::after {
+      content: '';
+      position: absolute;
+      left: 14%.5;
+      top: 177%;
+      bottom: 10px;
+      height: 3px;
+      width: 4rem;
+      background-color: $second-color;
+    }
+  }
+  &__subtitle {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: $second-color;
+  }
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding: 2rem 0;
+  }
+  &__card {
+    width: 350px;
+    padding: 3rem;
+    background-color: $main-color;
+    border-bottom: 5px solid #fff;
+    &:nth-child(3) {
+      background-color: $second-color;
+      color: $main-color;
+      i {
+        color: $main-color;
+      }
+      &:hover {
+        border-bottom: inset;
+      }
+    }
+    &:hover {
+      border-bottom: 5px solid $second-color;
+    }
+    &-icon {
+      font-size: 3rem;
+      color: $second-color;
+    }
+    &-title {
+      padding: 1rem 0;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: $second-color;
+    }
+  }
+  &__line::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    top: 310%;
+    height: 3rem;
+    width: 3px;
+    background-color: $second-color;
+  }
+}
